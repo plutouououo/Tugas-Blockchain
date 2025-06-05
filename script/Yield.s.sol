@@ -10,14 +10,15 @@ contract DeployYieldVaultScript is Script {
     MockIDRX public mockIDRX;
     uint256 forkId;
 
-    function setUp() public {
-        string memory rpc = vm.envString("SEPOLIA_RPC_URL");
-        forkId = vm.createSelectFork(rpc);
-    }
+    //function setUp() public {
+    //    string memory rpc = vm.envString("SEPOLIA_RPC_URL");
+    //    forkId = vm.createSelectFork(rpc);
+    //}
 
     function run() public {
-        uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
-        vm.startBroadcast(deployerPrivateKey);
+        //uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
+        //vm.startBroadcast(deployerPrivateKey);
+        vm.startBroadcast();
 
         // Deploy contracts
         mockIDRX = new MockIDRX();
